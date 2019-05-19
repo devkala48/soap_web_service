@@ -1,0 +1,94 @@
+2019-05-14 12:45:47,659 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'firstmule'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-05-14 12:45:47,880 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-05-14 12:45:48,024 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-05-14 12:45:48,210 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-05-14 12:45:48,210 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-05-14 12:45:48,298 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@791cbf87: startup date [Tue May 14 12:45:48 CDT 2019]; root of context hierarchy
+2019-05-14 12:45:49,932 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-05-14 12:45:50,955 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2019-05-14 12:45:51,266 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/devkalagahamagar/eclipseMars/workspace/.mule/./.mule/firstmule/queue-tx-log/tx1.log and /Users/devkalagahamagar/eclipseMars/workspace/.mule/./.mule/firstmule/queue-tx-log/tx2.log
+2019-05-14 12:45:51,278 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/devkalagahamagar/eclipseMars/workspace/.mule/./.mule/firstmule/queue-xa-tx-log/tx1.log and /Users/devkalagahamagar/eclipseMars/workspace/.mule/./.mule/firstmule/queue-xa-tx-log/tx2.log
+2019-05-14 12:45:51,453 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-05-14 12:45:51,458 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: firstmuleFlow
+2019-05-14 12:45:51,458 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@31120021
+2019-05-14 12:45:51,495 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: firstmuleFlow.stage1
+2019-05-14 12:45:51,924 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/devkalagahamagar/eclipseMars/workspace/.mule/apps/firstmule/firstmule.xml'}]"
+2019-05-14 12:45:51,924 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/devkalagahamagar/eclipseMars/workspace/.mule/apps/firstmule/firstmule.xml'}]"
+2019-05-14 12:45:51,929 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'firstmule'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-05-14 12:45:51,932 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-05-14 12:45:51,932 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-05-14 12:45:52,010 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2019-05-14 12:45:52,015 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-05-14 12:45:52,018 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-05-14 12:45:52,019 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: firstmuleFlow
+2019-05-14 12:45:52,020 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: firstmuleFlow.stage1
+2019-05-14 12:45:52,106 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-05-14 12:45:52,143 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: firstmule                                             *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   DevKit Extension Information                                     *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-05-14 12:46:27,641 [[firstmule].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/favicon.ico
+2019-05-14 12:46:27,641 [[firstmule].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/]
+2019-05-16 15:33:59,008 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'firstmule'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-05-16 15:33:59,205 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-05-16 15:33:59,386 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-05-16 15:33:59,556 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-05-16 15:33:59,556 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-05-16 15:33:59,642 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@791cbf87: startup date [Thu May 16 15:33:59 CDT 2019]; root of context hierarchy
+2019-05-16 15:34:01,111 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-05-16 15:34:02,014 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2019-05-16 15:34:02,274 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/devkalagahamagar/eclipseMars/workspace/.mule/./.mule/firstmule/queue-tx-log/tx1.log and /Users/devkalagahamagar/eclipseMars/workspace/.mule/./.mule/firstmule/queue-tx-log/tx2.log
+2019-05-16 15:34:02,285 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/devkalagahamagar/eclipseMars/workspace/.mule/./.mule/firstmule/queue-xa-tx-log/tx1.log and /Users/devkalagahamagar/eclipseMars/workspace/.mule/./.mule/firstmule/queue-xa-tx-log/tx2.log
+2019-05-16 15:34:02,371 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-05-16 15:34:02,375 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: firstmuleFlow
+2019-05-16 15:34:02,375 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@203d1d93
+2019-05-16 15:34:02,408 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: firstmuleFlow.stage1
+2019-05-16 15:34:02,763 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/devkalagahamagar/eclipseMars/workspace/.mule/apps/firstmule/firstmule.xml'}]"
+2019-05-16 15:34:02,763 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/devkalagahamagar/eclipseMars/workspace/.mule/apps/firstmule/firstmule.xml'}]"
+2019-05-16 15:34:02,769 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'firstmule'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-05-16 15:34:02,772 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-05-16 15:34:02,772 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-05-16 15:34:02,833 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2019-05-16 15:34:02,834 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-05-16 15:34:02,837 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-05-16 15:34:02,838 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: firstmuleFlow
+2019-05-16 15:34:02,838 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: firstmuleFlow.stage1
+2019-05-16 15:34:02,868 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-05-16 15:34:02,885 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: firstmule                                             *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   DevKit Extension Information                                     *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************

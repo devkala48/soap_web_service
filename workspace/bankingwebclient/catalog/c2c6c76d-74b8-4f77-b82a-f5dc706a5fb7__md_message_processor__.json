@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Web_Service_Consumer1",
+            "typeId": "User"
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "c2c6c76d-74b8-4f77-b82a-f5dc706a5fb7",
+    "version": "5.2.0.0"
+}

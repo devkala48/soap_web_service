@@ -1,0 +1,6 @@
+#** GENERATED CONTENT ** Mule Application Deployment Descriptor
+#Thu May 16 15:49:02 CDT 2019
+redeployment.enabled=true
+encoding=UTF-8
+domain=default
+config.resources=bankingwebclient.xml

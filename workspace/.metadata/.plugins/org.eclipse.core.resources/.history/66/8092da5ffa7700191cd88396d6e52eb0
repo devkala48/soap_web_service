@@ -1,0 +1,57 @@
+package com.revature.soap;
+
+import java.util.ArrayList;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Use;
+
+import com.revature.bank.Account;
+import com.revature.bank.User;
+
+@WebService(targetNamespace = "http://www.bank.com")
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use=Use.LITERAL)
+public interface BankService {
+	static final String DEFAULT_URL = "jdbc:postgresql://localhost:5432/bank_soapAPI";
+	static final String DEFAULT_USERNAME = "postgres";
+	static final String DEFAULT_PASSWORD = "password";
+	
+	@WebMethod
+	@WebResult(name="User")
+	public User authenticate(@WebParam(name="Username")String username, @WebParam(name="Password")String password);
+	
+	@WebMethod
+	public boolean storeUser (@WebParam(name="User")User u);
+	
+	@WebMethod
+	public User getUserInformation(@WebParam(name="operator")User operator, @WebParam(name="id")Integer id);
+	
+	@WebMethod
+	public Account newAccount (@WebParam(name="User")User user);
+	
+	@WebMethod
+	@WebResult(name="Account")
+	public Account getAccount (@WebParam(name="id")Integer id);
+	
+	@WebMethod
+	@WebResult(name="Account")
+	public ArrayList<Account> getPendingAccounts (@WebParam(name="operator")User operator);
+	
+	@WebMethod
+	public boolean approveAccount (@WebParam(name="opertator")User operator, @WebParam(name="account")Account a);
+	
+	@WebMethod
+	public boolean denyAccount (@WebParam(name="operator")User operator, @WebParam(name="account")Account a);
+	
+	@WebMethod
+	public boolean withdraw(@WebParam(name="User")User user, @WebParam(name="Account")Account account, @WebParam(name="Amount")double amount);
+	
+	@WebMethod
+	public boolean deposit(@WebParam(name="User")User user, @WebParam(name="Account")Account account, @WebParam(name="Amount")double amount);
+	
+	@WebMethod
+	public boolean transfer(@WebParam(name="User")User user, Account src, Account dst, @WebParam(name="Amount")double amount, @WebParam(name="Memo")String memo);
+}

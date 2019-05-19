@@ -1,0 +1,44 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+  <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration" />
+  <flow name="bank_webservice_consumerFlow">
+    <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP" />
+  </flow>
+  <flow name="transfer:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [transfer:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="authenticate:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [authenticate:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="approveAccount:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [approveAccount:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="denyAccount:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [denyAccount:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="withdraw:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [withdraw:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="deposit:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [deposit:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="storeUser:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [storeUser:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="newAccount:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [newAccount:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="getAccount:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [getAccount:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="getPendingAccounts:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [getPendingAccounts:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <flow name="getUserInformation:/BankServiceImpService/BankServiceImpPort/api-config">
+    <set-payload value="&lt;soap:Fault xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Operation [getUserInformation:/BankServiceImpService/BankServiceImpPort/api-config] not implemented&lt;/faultstring&gt;&lt;/soap:Fault&gt;" />
+  </flow>
+  <apikit-soap:config xmlns:apikit-soap="http://www.mulesoft.org/schema/mule/apikit-soap" name="/BankServiceImpService/BankServiceImpPort/api-config" wsdlUrl="banking.wsdl" serviceName="BankServiceImpService" portName="BankServiceImpPort" />
+  <flow name="api-main">
+    <http:listener path="/BankServiceImpService/BankServiceImpPort" config-ref="HTTP_Listener_Configuration" doc:name="/BankServiceImpService/BankServiceImpPort" />
+    <apikit-soap:router xmlns:apikit-soap="http://www.mulesoft.org/schema/mule/apikit-soap" config-ref="/BankServiceImpService/BankServiceImpPort/api-config" />
+  </flow>
+</mule>

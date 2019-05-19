@@ -1,0 +1,83 @@
+package com.revature.soap;
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use=Use.LITERAL)
+import java.util.ArrayList;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Use;
+
+import com.revature.bank.Account;
+import com.revature.bank.Bank;
+import com.revature.bank.User;
+
+@WebService(endpointInterface = "com.revature.soap.BankService") 
+public class BankServiceImp implements BankService{
+	public static Bank b;
+	
+	@PostConstruct
+	public void init() {
+		b = new Bank("", DEFAULT_URL, DEFAULT_USERNAME, DEFAULT_PASSWORD);
+	}
+	
+	@Override
+	public User authenticate(String username, String password) {
+		return b.authenticate(username, password);
+	}
+
+	@Override
+	public boolean storeUser(User u) {
+		return b.storeUser(u);
+	}
+	
+	@Override
+	public Account newAccount(User user) {
+		return b.newAccount(user);
+	}
+
+	@Override
+	public Account getAccount(Integer id) {
+		return b.getAccount(id);
+	}
+
+	@Override
+	public ArrayList<Account> getPendingAccounts(User operator) {
+		return b.getPendingAccounts(operator);
+	}
+
+	@Override
+	public boolean approveAccount(User operator, Account a) {
+		return b.approveAccount(operator, a);
+	}
+
+	@Override
+	public boolean denyAccount(User operator, Account a) {
+		return b.denyAccount(operator, a);
+	}
+
+	@Override
+	public boolean withdraw(User user, Account account, double amount) {
+		return b.withdraw(user, account, amount);
+	}
+
+	@Override
+	public boolean deposit(User user, Account account, double amount) {
+		return b.deposit(user, account, amount);
+	}
+
+	@Override
+	public boolean transfer(User user, Account src, Account dst, double amount, String memo) {
+		return b.transfer(user, src, dst, amount, memo);
+	}
+	@PreDestroy
+	public void close() {
+		b.close();
+	}
+
+	@Override
+	public User getUserInformation(User operator, Integer id) {
+		return b.getUserInformation(operator, id);
+	}
+
+}
