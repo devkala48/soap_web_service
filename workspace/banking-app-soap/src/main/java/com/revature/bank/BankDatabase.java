@@ -169,12 +169,10 @@ public class BankDatabase {
 	}
 	
 	public BankDatabase (String url, String username, String password) {
-		try {
-			this.conn = DriverManager.getConnection(url, username, password);
-			this.open();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		this.url = url;
+		this.username = username;
+		this.password = password;
+		this.open();
 	}
 	
 	/**
@@ -183,8 +181,10 @@ public class BankDatabase {
 	 */
 	public void open () {
 		try {
-			if (this.conn == null || this.conn.isClosed())
+			if (this.conn == null || this.conn.isClosed()){
+				DriverManager.registerDriver(new org.postgresql.Driver());
 				this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+			}
 			
 			this.STATEMENT_STORE_USER = conn.prepareStatement(SQL_STORE_USER, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			this.STATEMENT_RETRIEVE_USER_ID = conn.prepareStatement(SQL_RETRIEVE_USER_ID, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);

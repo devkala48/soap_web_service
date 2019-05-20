@@ -15,7 +15,7 @@ import com.revature.bank.User;
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use=Use.LITERAL)
 public interface BankService {
-	static final String DEFAULT_URL = "jdbc:postgresql://localhost:5432/bank_soapAPI";
+	static final String DEFAULT_URL = "jdbc:postgresql://localhost:5432/project_0";
 	static final String DEFAULT_USERNAME = "postgres";
 	static final String DEFAULT_PASSWORD = "password";
 	
