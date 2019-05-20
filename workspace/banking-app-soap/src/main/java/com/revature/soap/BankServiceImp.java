@@ -72,11 +72,17 @@ public class BankServiceImp implements BankService{
 	public User getUserInformation(User operator, Integer id) {
 		return b.getUserInformation(operator, id);
 	}
+	
+	@Override
+	public boolean apiTransfer(User user, Integer src_id, Integer dst_id, double amount, String memo) {
+		Account scr_obj = b.getAccount(src_id);
+		Account dst_obj = b.getAccount(dst_id);
+		return b.transfer(user, scr_obj, dst_obj, amount, memo);
+	}
+	
 	@PreDestroy
 	public void close() {
 		b.close();
 	}
-
-	
 
 }

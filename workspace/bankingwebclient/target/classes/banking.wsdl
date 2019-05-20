@@ -10,11 +10,11 @@
 <message name="transferResponse">
 <part name="parameters" element="tns:transferResponse"/>
 </message>
-<message name="authenticate">
-<part name="parameters" element="tns:authenticate"/>
+<message name="withdraw">
+<part name="parameters" element="tns:withdraw"/>
 </message>
-<message name="authenticateResponse">
-<part name="parameters" element="tns:authenticateResponse"/>
+<message name="withdrawResponse">
+<part name="parameters" element="tns:withdrawResponse"/>
 </message>
 <message name="storeUser">
 <part name="parameters" element="tns:storeUser"/>
@@ -52,12 +52,6 @@
 <message name="denyAccountResponse">
 <part name="parameters" element="tns:denyAccountResponse"/>
 </message>
-<message name="withdraw">
-<part name="parameters" element="tns:withdraw"/>
-</message>
-<message name="withdrawResponse">
-<part name="parameters" element="tns:withdrawResponse"/>
-</message>
 <message name="deposit">
 <part name="parameters" element="tns:deposit"/>
 </message>
@@ -70,14 +64,26 @@
 <message name="getUserInformationResponse">
 <part name="parameters" element="tns:getUserInformationResponse"/>
 </message>
+<message name="apiTransfer">
+<part name="parameters" element="tns:apiTransfer"/>
+</message>
+<message name="apiTransferResponse">
+<part name="parameters" element="tns:apiTransferResponse"/>
+</message>
+<message name="authenticate">
+<part name="parameters" element="tns:authenticate"/>
+</message>
+<message name="authenticateResponse">
+<part name="parameters" element="tns:authenticateResponse"/>
+</message>
 <portType name="BankService">
 <operation name="transfer">
 <input wsam:Action="http://soap.revature.com/BankService/transferRequest" message="tns:transfer"/>
 <output wsam:Action="http://soap.revature.com/BankService/transferResponse" message="tns:transferResponse"/>
 </operation>
-<operation name="authenticate">
-<input wsam:Action="http://soap.revature.com/BankService/authenticateRequest" message="tns:authenticate"/>
-<output wsam:Action="http://soap.revature.com/BankService/authenticateResponse" message="tns:authenticateResponse"/>
+<operation name="withdraw">
+<input wsam:Action="http://soap.revature.com/BankService/withdrawRequest" message="tns:withdraw"/>
+<output wsam:Action="http://soap.revature.com/BankService/withdrawResponse" message="tns:withdrawResponse"/>
 </operation>
 <operation name="storeUser">
 <input wsam:Action="http://soap.revature.com/BankService/storeUserRequest" message="tns:storeUser"/>
@@ -103,10 +109,6 @@
 <input wsam:Action="http://soap.revature.com/BankService/denyAccountRequest" message="tns:denyAccount"/>
 <output wsam:Action="http://soap.revature.com/BankService/denyAccountResponse" message="tns:denyAccountResponse"/>
 </operation>
-<operation name="withdraw">
-<input wsam:Action="http://soap.revature.com/BankService/withdrawRequest" message="tns:withdraw"/>
-<output wsam:Action="http://soap.revature.com/BankService/withdrawResponse" message="tns:withdrawResponse"/>
-</operation>
 <operation name="deposit">
 <input wsam:Action="http://soap.revature.com/BankService/depositRequest" message="tns:deposit"/>
 <output wsam:Action="http://soap.revature.com/BankService/depositResponse" message="tns:depositResponse"/>
@@ -114,6 +116,14 @@
 <operation name="getUserInformation">
 <input wsam:Action="http://soap.revature.com/BankService/getUserInformationRequest" message="tns:getUserInformation"/>
 <output wsam:Action="http://soap.revature.com/BankService/getUserInformationResponse" message="tns:getUserInformationResponse"/>
+</operation>
+<operation name="apiTransfer">
+<input wsam:Action="http://soap.revature.com/BankService/apiTransferRequest" message="tns:apiTransfer"/>
+<output wsam:Action="http://soap.revature.com/BankService/apiTransferResponse" message="tns:apiTransferResponse"/>
+</operation>
+<operation name="authenticate">
+<input wsam:Action="http://soap.revature.com/BankService/authenticateRequest" message="tns:authenticate"/>
+<output wsam:Action="http://soap.revature.com/BankService/authenticateResponse" message="tns:authenticateResponse"/>
 </operation>
 </portType>
 <binding name="BankServiceImpPortBinding" type="tns:BankService">
@@ -127,7 +137,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="authenticate">
+<operation name="withdraw">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -190,15 +200,6 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="withdraw">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="deposit">
 <soap:operation soapAction=""/>
 <input>
@@ -209,6 +210,24 @@
 </output>
 </operation>
 <operation name="getUserInformation">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="apiTransfer">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="authenticate">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

@@ -55,4 +55,7 @@ public interface BankService {
 	
 	@WebMethod
 	public boolean transfer(@WebParam(name="user")User user, @WebParam(name="src")Account src,  @WebParam(name="dst")Account dst, @WebParam(name="amount")double amount, @WebParam(name="memo")String memo);
+	
+	@WebMethod
+	public boolean apiTransfer(@WebParam(name="user")User user, @WebParam(name="src")Integer src_id, @WebParam(name="dst")Integer dst_id, @WebParam(name="amount")double amount, @WebParam(name="memo")String memo);
 }
