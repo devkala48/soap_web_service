@@ -557,6 +557,9 @@ public class BankDatabase {
 	 */
 	public Permissions fetchPermissions (User u, Account a) {
 		
+		if (a == null || u == null)
+			return null;
+		
 		Permissions output;
 		
 		try {

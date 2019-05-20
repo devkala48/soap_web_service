@@ -135,6 +135,8 @@ public class Bank{
 	
 	public boolean transfer (User u, Account src, Account dst, double amount, String memo) {
 		
+		if(src == null || dst == null || u == null)
+			return false;
 		
 		Permissions p_src = this.db.fetchPermissions(u, src);
 		Permissions p_dst = this.db.fetchPermissions(u, dst);
