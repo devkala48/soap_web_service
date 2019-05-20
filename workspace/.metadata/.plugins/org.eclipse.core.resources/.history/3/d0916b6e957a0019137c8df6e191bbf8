@@ -16,7 +16,13 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
     <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
     <flow name="bankwebclientFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/submitForm" allowedMethods="post" doc:name="HTTP"/>
-        <set-payload value="  " doc:name="Set Payload"/>
+        <set-payload value="{'user':
+	{'id':1, 'username':'admin', 'password':'password', 'authorization':'ADMIN'} ,
+	'src':{'balance':1000','status':'CLEAR','id':1},
+	'dst':{'balance':2000,'status':'CLEAR','id':2},
+	'amount':10,
+	'memo':'WITHDRAW'}
+	" doc:name="Set Payload"/>
     </flow>
     <flow name="bankwebclientFlow1">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/getAccount" doc:name="HTTP" allowedMethods="get"/>

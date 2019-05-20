@@ -256,3 +256,8 @@
 127.0.0.1 - - [19/May/2019:19:14:48 -0500] "GET /BankingWebService/banking?xsd=1 HTTP/1.1" 200 7693
 127.0.0.1 - - [19/May/2019:19:14:48 -0500] "GET /BankingWebService/banking?xsd=1 HTTP/1.1" 200 7693
 127.0.0.1 - - [19/May/2019:19:15:08 -0500] "POST /BankingWebService/banking HTTP/1.1" 200 311
+127.0.0.1 - - [19/May/2019:19:23:06 -0500] "GET /BankingWebService/banking?xsd=1 HTTP/1.1" 200 7693
+127.0.0.1 - - [19/May/2019:19:23:06 -0500] "GET /BankingWebService/banking?xsd=1 HTTP/1.1" 200 7693
+127.0.0.1 - - [19/May/2019:19:23:06 -0500] "GET /BankingWebService/banking?xsd=1 HTTP/1.1" 200 7693
+127.0.0.1 - - [19/May/2019:19:23:06 -0500] "GET /BankingWebService/banking?xsd=1 HTTP/1.1" 200 7693
+127.0.0.1 - - [19/May/2019:19:23:06 -0500] "GET /BankingWebService/banking?xsd=1 HTTP/1.1" 200 7693
